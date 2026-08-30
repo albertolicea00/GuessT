@@ -10,7 +10,7 @@ class ModeSelectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(AppLocalizations.of(context)!.gameModesTitle)),
+      appBar: AppBar(title: Text(AppLocalizations.of(context).gameModesTitle)),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: GridView.builder(

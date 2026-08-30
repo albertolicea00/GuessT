@@ -6,7 +6,7 @@ class TutorialScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final steps = [
       (icon: Icons.smartphone, title: l10n.tutorialStep1Title, text: l10n.tutorialStep1Text),
       (icon: Icons.arrow_downward, title: l10n.tutorialStep2Title, text: l10n.tutorialStep2Text),

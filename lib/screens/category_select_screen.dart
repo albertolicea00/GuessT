@@ -44,7 +44,7 @@ class CategorySelectScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final locale = Localizations.localeOf(context);
     final categories = _availableCategories(locale);
     return Scaffold(
@@ -56,7 +56,7 @@ class CategorySelectScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final category = categories[index];
           return Card(
-            color: mode.color.withOpacity(0.15),
+            color: mode.color.withValues(alpha: 0.15),
             child: ListTile(
               leading: Icon(category.icon, color: mode.color),
               title: Text(category.name),

@@ -11,7 +11,7 @@ class TeamResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final sorted = List.of(scores)
       ..sort((a, b) => b.result.score.compareTo(a.result.score));
     final winner = sorted.first;
@@ -36,7 +36,7 @@ class TeamResultsScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final entry = sorted[index];
                   return Card(
-                    color: index == 0 ? Colors.amber.withOpacity(0.15) : null,
+                    color: index == 0 ? Colors.amber.withValues(alpha: 0.15) : null,
                     child: ListTile(
                       leading: CircleAvatar(child: Text('${index + 1}')),
                       title: Text(entry.teamName),

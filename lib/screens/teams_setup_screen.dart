@@ -23,8 +23,8 @@ class _TeamsSetupScreenState extends State<TeamsSetupScreen> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _teams ??= [
-      AppLocalizations.of(context)!.defaultTeamName(1),
-      AppLocalizations.of(context)!.defaultTeamName(2),
+      AppLocalizations.of(context).defaultTeamName(1),
+      AppLocalizations.of(context).defaultTeamName(2),
     ];
   }
 
@@ -48,7 +48,7 @@ class _TeamsSetupScreenState extends State<TeamsSetupScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final teams = _teams!;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.teamsTitle)),

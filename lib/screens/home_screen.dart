@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen>
                       ),
                       Text(
                         l10n.appTagline,
-                        style: TextStyle(color: Colors.white.withOpacity(0.6)),
+                        style: TextStyle(color: Colors.white.withValues(alpha: 0.6)),
                       ),
                     ],
                   ),
@@ -153,7 +153,7 @@ class _SecondaryIcon extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Icon(icon, color: Colors.white.withOpacity(0.85)),
+            Icon(icon, color: Colors.white.withValues(alpha: 0.85)),
             const SizedBox(height: 4),
             Text(label, style: const TextStyle(fontSize: 11)),
           ],

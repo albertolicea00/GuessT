@@ -11,9 +11,9 @@ class ModeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final text = gameModeText(mode.id, AppLocalizations.of(context)!);
+    final text = gameModeText(mode.id, AppLocalizations.of(context));
     return Material(
-      color: mode.color.withOpacity(0.18),
+      color: mode.color.withValues(alpha: 0.18),
       borderRadius: BorderRadius.circular(20),
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
@@ -22,7 +22,7 @@ class ModeCard extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: mode.color.withOpacity(0.6), width: 1.5),
+            border: Border.all(color: mode.color.withValues(alpha: 0.6), width: 1.5),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +38,7 @@ class ModeCard extends StatelessWidget {
               Text(
                 text.tagline,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.7)),
+                style: TextStyle(fontSize: 12, color: Colors.white.withValues(alpha: 0.7)),
               ),
             ],
           ),

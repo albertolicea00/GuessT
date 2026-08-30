@@ -13,7 +13,7 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(l10n.resultsTitle), automaticallyImplyLeading: false),
       body: Padding(
@@ -86,7 +86,7 @@ class _WordRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
-      child: Text(word, style: TextStyle(color: color.withOpacity(0.9))),
+      child: Text(word, style: TextStyle(color: color.withValues(alpha: 0.9))),
     );
   }
 }

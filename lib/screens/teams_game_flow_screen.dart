@@ -62,7 +62,7 @@ class _TeamsGameFlowScreenState extends State<TeamsGameFlowScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final teamName = widget.teamNames[_currentTeam];
     return Scaffold(
       appBar: AppBar(title: Text(l10n.teamsTitle), automaticallyImplyLeading: false),
@@ -73,7 +73,7 @@ class _TeamsGameFlowScreenState extends State<TeamsGameFlowScreen> {
           children: [
             Text(
               l10n.turnLabel,
-              style: TextStyle(color: Colors.white.withOpacity(0.6), fontSize: 16),
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 16),
             ),
             const SizedBox(height: 8),
             Text(

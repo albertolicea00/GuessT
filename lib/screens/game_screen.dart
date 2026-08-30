@@ -156,10 +156,10 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final urgent = _secondsLeft <= 10;
     return Scaffold(
-      backgroundColor: widget.mode.color.withOpacity(0.12),
+      backgroundColor: widget.mode.color.withValues(alpha: 0.12),
       appBar: AppBar(
         title: Text(widget.teamLabel ?? gameModeText(widget.mode.id, l10n).name),
         backgroundColor: Colors.transparent,
@@ -207,7 +207,7 @@ class _GameScreenState extends State<GameScreen> {
               Text(
                 l10n.tiltHint,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.5)),
+                style: TextStyle(fontSize: 12, color: Colors.white.withValues(alpha: 0.5)),
               ),
             ],
           ),
