@@ -1,0 +1,119 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "GuessT",
+  "appTagline": "Guess it, tilt it, win it",
+  "playButton": "Play",
+  "settingsLabel": "Settings",
+  "categoriesLabel": "Categories",
+  "tutorialLabel": "Tutorial",
+  "creditsLabel": "Credits",
+
+  "gameModesTitle": "Game modes",
+
+  "continueButton": "Continue",
+  "durationChip": "{seconds}s",
+  "@durationChip": {
+    "placeholders": { "seconds": { "type": "int" } }
+  },
+  "passAllowedChip": "Pass allowed",
+  "noPassChip": "No passing",
+  "penalizeChip": "Passing costs points",
+
+  "chooseCategoryTitle": "Choose a category",
+  "wordsCountLabel": "{count, plural, one{1 word} other{{count} words}}",
+  "@wordsCountLabel": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "customDeckTitle": "My custom deck",
+  "customDeckHint": "Type a word...",
+  "customDeckEmptyHint": "Add at least 5 words to play.",
+  "customDeckMissing": "{count, plural, one{1 more word needed} other{{count} more words needed}}",
+  "@customDeckMissing": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "playCustomDeckButton": "Play",
+
+  "teamsTitle": "Teams",
+  "teamNameHint": "Team name...",
+  "continueWithTeams": "{count, plural, one{Continue (1 team)} other{Continue ({count} teams)}}",
+  "@continueWithTeams": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "defaultTeamName": "Team {number}",
+  "@defaultTeamName": {
+    "placeholders": { "number": { "type": "int" } }
+  },
+
+  "passLabel": "Pass",
+  "correctLabel": "Correct",
+  "tiltHint": "Tilt the phone: down = correct, up = pass",
+  "scoreLabel": "Score: {score}",
+  "@scoreLabel": {
+    "placeholders": { "score": { "type": "int" } }
+  },
+
+  "resultsTitle": "Results",
+  "pointsSuffix": "points",
+  "correctSectionTitle": "Correct",
+  "passedSectionTitle": "Passed",
+  "mainMenuButton": "Main menu",
+
+  "turnLabel": "Turn",
+  "startButton": "Start",
+
+  "finalResultsTitle": "Final results",
+  "winnerLabel": "{team} wins!",
+  "@winnerLabel": {
+    "placeholders": { "team": { "type": "String" } }
+  },
+  "scorePts": "{score} pts",
+  "@scorePts": {
+    "placeholders": { "score": { "type": "int" } }
+  },
+
+  "settingsTitle": "Settings",
+  "soundLabel": "Sound",
+  "vibrationLabel": "Vibration",
+  "languageLabel": "Language",
+  "languageSystem": "System default",
+
+  "tutorialTitle": "Tutorial",
+  "tutorialStep1Title": "1. Get ready",
+  "tutorialStep1Text": "Pick a mode and category, then hold the phone on your forehead with the screen facing outward.",
+  "tutorialStep2Title": "2. Tilt down",
+  "tutorialStep2Text": "When someone guesses the word, tilt the phone down to mark it correct.",
+  "tutorialStep3Title": "3. Tilt up",
+  "tutorialStep3Text": "If the word is too hard, tilt the phone up to pass (if the mode allows it).",
+  "tutorialStep4Title": "4. Score points",
+  "tutorialStep4Text": "When time runs out, check your results. Compete solo or in teams!",
+
+  "creditsTitle": "Credits",
+  "creditsVersion": "v0.1.0",
+  "creditsBody": "Guess it. Tilt it. Win it. For family, friends, or teams.",
+
+  "modeClassicName": "Classic",
+  "modeClassicTagline": "The standard mode",
+  "modeClassicDescription": "Hold the phone on your forehead. Tilt down to guess correctly, tilt up to pass. 60 seconds per round.",
+
+  "modeTimeAttackName": "Time Attack",
+  "modeTimeAttackTagline": "Fast and intense",
+  "modeTimeAttackDescription": "30 seconds, no passing allowed. Every word counts. Only for the quickest players.",
+
+  "modeTeamsName": "Teams",
+  "modeTeamsTagline": "For playing in a group",
+  "modeTeamsDescription": "Create 2 or more teams. Each team plays a 60-second round. The team with the most correct guesses wins.",
+
+  "modeKidsName": "Kids Mode",
+  "modeKidsTagline": "Easy and visual",
+  "modeKidsDescription": "Simple words: animals, colors, objects. 90 seconds to relax and enjoy.",
+
+  "modeHardName": "Hard Mode",
+  "modeHardTagline": "For experts",
+  "modeHardDescription": "History, science, and culture words. Shorter time, and passing costs you points.",
+
+  "modeCustomName": "Custom",
+  "modeCustomTagline": "Your own deck",
+  "modeCustomDescription": "Write your own words and play with your deck, saved on this device. Played just like Classic mode."
+}

@@ -1,0 +1,95 @@
+{
+  "@@locale": "es",
+
+  "appTitle": "GuessT",
+  "appTagline": "Adivina, inclina, gana",
+  "playButton": "Jugar",
+  "settingsLabel": "Ajustes",
+  "categoriesLabel": "Categorías",
+  "tutorialLabel": "Tutorial",
+  "creditsLabel": "Créditos",
+
+  "gameModesTitle": "Modos de juego",
+
+  "continueButton": "Continuar",
+  "durationChip": "{seconds}s",
+  "passAllowedChip": "Permite pasar",
+  "noPassChip": "Sin pasar",
+  "penalizeChip": "Penaliza pasar",
+
+  "chooseCategoryTitle": "Elige una categoría",
+  "wordsCountLabel": "{count, plural, one{1 palabra} other{{count} palabras}}",
+
+  "customDeckTitle": "Mi mazo personalizado",
+  "customDeckHint": "Escribe una palabra...",
+  "customDeckEmptyHint": "Agrega al menos 5 palabras para jugar.",
+  "customDeckMissing": "{count, plural, one{Falta 1 palabra} other{Faltan {count} palabras}}",
+  "playCustomDeckButton": "Jugar",
+
+  "teamsTitle": "Equipos",
+  "teamNameHint": "Nombre del equipo...",
+  "continueWithTeams": "{count, plural, one{Continuar (1 equipo)} other{Continuar ({count} equipos)}}",
+  "defaultTeamName": "Equipo {number}",
+
+  "passLabel": "Pasar",
+  "correctLabel": "Correcto",
+  "tiltHint": "Inclina el teléfono: abajo = correcto, arriba = pasar",
+  "scoreLabel": "Puntos: {score}",
+
+  "resultsTitle": "Resultados",
+  "pointsSuffix": "puntos",
+  "correctSectionTitle": "Aciertos",
+  "passedSectionTitle": "Pasadas",
+  "mainMenuButton": "Menú principal",
+
+  "turnLabel": "Turno de",
+  "startButton": "Empezar",
+
+  "finalResultsTitle": "Resultados finales",
+  "winnerLabel": "¡{team} gana!",
+  "scorePts": "{score} pts",
+
+  "settingsTitle": "Ajustes",
+  "soundLabel": "Sonido",
+  "vibrationLabel": "Vibración",
+  "languageLabel": "Idioma",
+  "languageSystem": "Predeterminado del sistema",
+
+  "tutorialTitle": "Tutorial",
+  "tutorialStep1Title": "1. Prepárate",
+  "tutorialStep1Text": "Elige un modo y una categoría, luego ponte el teléfono en la frente con la pantalla mirando hacia afuera.",
+  "tutorialStep2Title": "2. Inclina hacia abajo",
+  "tutorialStep2Text": "Cuando alguien adivine la palabra, inclina el teléfono hacia abajo para marcarla como correcta.",
+  "tutorialStep3Title": "3. Inclina hacia arriba",
+  "tutorialStep3Text": "Si la palabra es muy difícil, inclina hacia arriba para pasar (si el modo lo permite).",
+  "tutorialStep4Title": "4. Suma puntos",
+  "tutorialStep4Text": "Cuando se acabe el tiempo, revisa tus resultados. ¡Compite contigo mismo o en equipos!",
+
+  "creditsTitle": "Créditos",
+  "creditsVersion": "v0.1.0",
+  "creditsBody": "Un juego de adivinanzas al estilo Heads Up!, creado para jugar en familia, con amigos, o en equipos.",
+
+  "modeClassicName": "Clásico",
+  "modeClassicTagline": "El modo estándar",
+  "modeClassicDescription": "Ponte el teléfono en la frente. Inclina hacia abajo para acertar, hacia arriba para pasar. 60 segundos por ronda.",
+
+  "modeTimeAttackName": "Contra Reloj",
+  "modeTimeAttackTagline": "Rápido e intenso",
+  "modeTimeAttackDescription": "30 segundos, sin poder pasar. Cada palabra cuenta. Solo para los más rápidos.",
+
+  "modeTeamsName": "Equipos",
+  "modeTeamsTagline": "Para jugar en grupo",
+  "modeTeamsDescription": "Crea 2 o más equipos. Cada uno juega su ronda de 60 segundos. Gana el equipo con más aciertos.",
+
+  "modeKidsName": "Modo Niño",
+  "modeKidsTagline": "Fácil y visual",
+  "modeKidsDescription": "Palabras simples: animales, colores, objetos. 90 segundos para relajarse y disfrutar.",
+
+  "modeHardName": "Modo Difícil",
+  "modeHardTagline": "Para expertos",
+  "modeHardDescription": "Palabras de historia, ciencia y cultura. Tiempo reducido y penalización por cada palabra que pases.",
+
+  "modeCustomName": "Personalizado",
+  "modeCustomTagline": "Tu propio mazo",
+  "modeCustomDescription": "Escribe tus propias palabras y juega con tu mazo, guardado en este dispositivo. Se juega igual que el modo clásico."
+}
