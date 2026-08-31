@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../models/game_mode.dart';
+import '../theme/app_theme.dart';
 import '../widgets/primary_button.dart';
 import 'game_screen.dart';
 import 'team_results_screen.dart';
@@ -73,7 +74,7 @@ class _TeamsGameFlowScreenState extends State<TeamsGameFlowScreen> {
           children: [
             Text(
               l10n.turnLabel,
-              style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 16),
+              style: const TextStyle(color: AppTheme.textMuted, fontSize: 16),
             ),
             const SizedBox(height: 8),
             Text(

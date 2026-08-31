@@ -36,7 +36,7 @@ class TeamResultsScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final entry = sorted[index];
                   return Card(
-                    color: index == 0 ? Colors.amber.withValues(alpha: 0.15) : null,
+                    color: index == 0 ? Colors.amber.withValues(alpha: 0.35) : null,
                     child: ListTile(
                       leading: CircleAvatar(child: Text('${index + 1}')),
                       title: Text(entry.teamName),

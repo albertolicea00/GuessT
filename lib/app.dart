@@ -15,7 +15,7 @@ class GuessTApp extends StatelessWidget {
         return MaterialApp(
           title: 'GuessT',
           debugShowCheckedModeBanner: false,
-          theme: AppTheme.dark,
+          theme: AppTheme.light,
           locale: locale,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,

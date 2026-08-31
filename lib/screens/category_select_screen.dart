@@ -56,7 +56,7 @@ class CategorySelectScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final category = categories[index];
           return Card(
-            color: mode.color.withValues(alpha: 0.15),
+            color: mode.color.withValues(alpha: 0.35),
             child: ListTile(
               leading: Icon(category.icon, color: mode.color),
               title: Text(category.name),

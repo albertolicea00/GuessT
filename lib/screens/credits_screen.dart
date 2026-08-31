@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../theme/app_theme.dart';
 
 class CreditsScreen extends StatelessWidget {
   const CreditsScreen({super.key});
@@ -17,7 +18,7 @@ class CreditsScreen extends StatelessWidget {
           children: [
             Text(l10n.appTitle, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900)),
             const SizedBox(height: 8),
-            Text(l10n.creditsVersion, style: const TextStyle(color: Colors.white70)),
+            Text(l10n.creditsVersion, style: const TextStyle(color: AppTheme.textMuted)),
             const SizedBox(height: 24),
             Text(l10n.creditsBody, textAlign: TextAlign.center),
           ],

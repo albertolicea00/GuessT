@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen>
                       ),
                       Text(
                         l10n.appTagline,
-                        style: TextStyle(color: Colors.white.withValues(alpha: 0.6)),
+                        style: const TextStyle(color: AppTheme.textMuted),
                       ),
                     ],
                   ),
@@ -153,7 +153,7 @@ class _SecondaryIcon extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Icon(icon, color: Colors.white.withValues(alpha: 0.85)),
+            Icon(icon, color: AppTheme.textMuted),
             const SizedBox(height: 4),
             Text(label, style: const TextStyle(fontSize: 11)),
           ],
