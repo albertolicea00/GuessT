@@ -2,18 +2,44 @@
 
 ## Setup
 
-1. Install Flutter (stable channel). Not installed/verified in this
-   project's original dev environment — first thing to check if
-   something below doesn't behave as described.
-2. `flutter pub get` — this also regenerates
-   `lib/l10n/generated/app_localizations.dart` from the ARB files,
-   since `generate: true` is set in `pubspec.yaml`.
-3. `flutter run`
+1. Install Flutter (stable channel).
+2. `make get` — runs `flutter pub get`, which also regenerates
+   `lib/l10n/generated/app_localizations.dart` from the ARB files
+   (`generate: true` is set in `pubspec.yaml`).
+3. `make run`
 
 If `pub get` complains about the `intl` version: run `flutter pub add
 intl` and let it pick the version matching your SDK. Flutter pins an
-exact `intl` version per release; the `^0.19.0` in `pubspec.yaml` is
-unverified against any specific SDK.
+exact `intl` version per release, so a hand-set constraint in
+`pubspec.yaml` can drift out of sync after a Flutter upgrade.
+
+On macOS, if `flutter run`/`flutter test` fail with "The Dart compiler
+exited unexpectedly": Gatekeeper likely quarantined the freshly
+downloaded SDK binaries. Fix with:
+```
+xattr -dr com.apple.quarantine "$(dirname "$(dirname "$(which flutter)")")"/../cache
+```
+or more simply, locate your Flutter SDK root (`flutter --version` or
+`which flutter`) and run `xattr -dr com.apple.quarantine <sdk-root>/bin/cache`.
+
+## Makefile
+
+A `Makefile` wraps the common commands — run `make help` for the full
+list, or `make` with no target for the same.
+
+| Target | Does |
+| --- | --- |
+| `make get` | `flutter pub get` |
+| `make l10n` | regenerate localization code from `lib/l10n/*.arb` |
+| `make analyze` | `flutter analyze` |
+| `make test` | `flutter test` |
+| `make format` | `dart format lib test` |
+| `make check` | `get` + `analyze` + `test` — run before committing |
+| `make doctor` | `flutter doctor -v` |
+| `make devices` | list available run targets |
+| `make clean` | `flutter clean` |
+| `make run` / `run-ios` / `run-android` / `run-macos` / `run-web` | launch on a given target |
+| `make build-apk` / `build-appbundle` / `build-ios` / `build-macos` / `build-web` | release builds |
 
 ## Conventions
 
@@ -64,6 +90,5 @@ python3 -c "import json; json.load(open('lib/l10n/app_en.arb'))"
 
 ## Before calling a change done
 
-Run `flutter analyze` and `flutter test`. Neither has been run against
-this codebase yet in an environment with Flutter installed — don't
-assume a change compiles just because it reads correctly.
+Run `make check` (`pub get` + `analyze` + `test`). Don't assume a
+change compiles just because it reads correctly.
