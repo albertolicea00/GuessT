@@ -9,6 +9,7 @@ const Map<String, String> kCategoryNamesEn = {
   'historyScience': 'History & Science',
   'colorsShapes': 'Colors & Shapes',
   'animalsEasy': 'Animals (easy)',
+  'numbers': 'Numbers',
 };
 
 const Map<String, List<String>> kCategoryWordsEn = {
@@ -46,5 +47,9 @@ const Map<String, List<String>> kCategoryWordsEn = {
   'animalsEasy': [
     'Dog', 'Cat', 'Cow', 'Duck', 'Fish', 'Horse',
     'Sheep', 'Chicken', 'Rabbit', 'Pig', 'Frog', 'Bee',
+  ],
+  'numbers': [
+    'One', 'Two', 'Three', 'Four', 'Five',
+    'Six', 'Seven', 'Eight', 'Nine', 'Ten',
   ],
 };

@@ -3,9 +3,11 @@ import '../l10n/generated/app_localizations.dart';
 import '../models/game_mode.dart';
 import '../models/game_mode_text.dart';
 import '../services/custom_deck_service.dart';
+import '../services/image_deck_service.dart';
 import '../widgets/primary_button.dart';
 import 'category_select_screen.dart';
 import 'custom_deck_screen.dart';
+import 'game_screen.dart';
 import 'teams_setup_screen.dart';
 
 class ModeInfoScreen extends StatelessWidget {
@@ -14,6 +16,27 @@ class ModeInfoScreen extends StatelessWidget {
   const ModeInfoScreen({super.key, required this.mode});
 
   Future<void> _continue(BuildContext context) async {
+    if (mode.usesImageDeck) {
+      final entries = await ImageDeckService.loadMoviePosters();
+      if (!context.mounted) return;
+      if (entries.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context).imageDeckEmpty)),
+        );
+        return;
+      }
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => GameScreen(
+            mode: mode,
+            words: entries.map((e) => e.answer).toList(),
+            imageAssets: entries.map((e) => e.assetPath).toList(),
+          ),
+        ),
+      );
+      return;
+    }
     if (mode.usesCustomDeck) {
       await CustomDeckService.instance.load();
       if (!context.mounted) return;

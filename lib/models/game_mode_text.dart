@@ -51,5 +51,17 @@ GameModeText gameModeText(GameModeId id, AppLocalizations l10n) {
         tagline: l10n.modeCustomTagline,
         description: l10n.modeCustomDescription,
       );
+    case GameModeId.numbers:
+      return GameModeText(
+        name: l10n.modeNumbersName,
+        tagline: l10n.modeNumbersTagline,
+        description: l10n.modeNumbersDescription,
+      );
+    case GameModeId.images:
+      return GameModeText(
+        name: l10n.modeImagesName,
+        tagline: l10n.modeImagesTagline,
+        description: l10n.modeImagesDescription,
+      );
   }
 }

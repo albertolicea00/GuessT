@@ -20,7 +20,7 @@ lib/
   models/
     game_mode.dart             GameModeId enum + GameModeConfig (structural only:
                                 duration, allowPass, penalizeWrong, restrictedCategoryIds,
-                                usesCustomDeck, isTeamMode — no UI text)
+                                usesCustomDeck, isTeamMode, usesImageDeck — no UI text)
     game_mode_text.dart         looks up a mode's localized name/tagline/description
                                 from AppLocalizations, keyed by GameModeId
     word_category.dart          WordCategoryMeta (id + icon, language-independent)
@@ -36,6 +36,8 @@ lib/
   services/
     settings_service.dart       sound / vibration / locale, persisted, ValueNotifier-based
     custom_deck_service.dart    user's custom word deck, persisted as JSON
+    image_deck_service.dart     discovers assets/images/movies/* via Flutter's
+                                asset manifest at runtime — answer derived from filename
     tilt_controller.dart        accelerometer tilt-gesture detection (calibrate,
                                 debounce, cooldown)
 
@@ -55,6 +57,7 @@ lib/
 
 ```
 Home → ModeSelect → ModeInfo →
+  usesImageDeck (Images)   → GameScreen (images from assets/images/movies/) → ResultsScreen
   usesCustomDeck (Custom)  → CustomDeckScreen → GameScreen → ResultsScreen
   isTeamMode (Teams)       → TeamsSetupScreen → CategorySelect
                            → TeamsGameFlowScreen (loops GameScreen per team)
@@ -69,12 +72,18 @@ itself.
 
 ## Game mode system
 
-The six modes are declared as const data in `kGameModes`
+The modes are declared as const data in `kGameModes`
 (`lib/models/game_mode.dart`): `classic`, `timeAttack`, `teams`, `kids`,
-`hard`, `custom`. Each is pure config — duration, whether passing is
-allowed, whether passing costs points, which categories it's restricted
-to, whether it uses the custom deck. `GameScreen` reads that config
-directly; there's no per-mode branching scattered across screens.
+`hard`, `custom`, `numbers`, `images`. Each is pure config — duration,
+whether passing is allowed, whether passing costs points, which
+categories it's restricted to, whether it uses the custom deck or the
+image deck. `GameScreen` reads that config directly; there's no
+per-mode branching scattered across screens.
+
+`images` is the odd one out: instead of a category of words, `GameScreen`
+gets an index-aligned `imageAssets` list alongside `words` and renders
+`Image.asset` in place of the word text for that round. The word itself
+still backs scoring and the results list — only the display differs.
 
 ## Localization
 
@@ -91,5 +100,10 @@ language falls back to English rather than failing to build.
 ## Known gaps / unverified
 
 - `tilt_controller.dart`'s accelerometer axis/threshold values are a
-  documented placeholder guess; needs on-device calibration.
+  documented placeholder guess; needs on-device calibration on a real
+  phone (verified so far only that it compiles and runs — the tilt
+  gesture itself hasn't been tested on hardware).
+- Custom deck editing supports add/remove only, not in-place edit or
   reorder.
+- Images mode ships with no bundled images — `assets/images/movies/`
+  starts empty; see its README for how to add some.

@@ -9,6 +9,7 @@ const List<WordCategoryMeta> kCategoryMetas = [
   WordCategoryMeta(id: 'historyScience', icon: Icons.science),
   WordCategoryMeta(id: 'colorsShapes', icon: Icons.palette),
   WordCategoryMeta(id: 'animalsEasy', icon: Icons.cruelty_free),
+  WordCategoryMeta(id: 'numbers', icon: Icons.numbers),
 ];
 
 const List<String> kNormalCategoryIds = ['animals', 'movies', 'series', 'objects'];

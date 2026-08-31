@@ -115,5 +115,17 @@
 
   "modeCustomName": "Custom",
   "modeCustomTagline": "Your own deck",
-  "modeCustomDescription": "Write your own words and play with your deck, saved on this device. Played just like Classic mode."
+  "modeCustomDescription": "Write your own words and play with your deck, saved on this device. Played just like Classic mode.",
+
+  "modeNumbersName": "Numbers",
+  "modeNumbersTagline": "Count it out",
+  "modeNumbersDescription": "Guess numbers one through ten. Simple, fast, and great for warming up a new group.",
+
+  "modeImagesName": "Images",
+  "modeImagesTagline": "Guess the picture",
+  "modeImagesDescription": "A picture shows instead of a word — guess what it is before time runs out.",
+  "imageDeckEmpty": "No images yet. Add pictures to assets/images/movies/ and restart the app.",
+
+  "tiltDownHint": "Tilt down for Correct!",
+  "tiltUpHint": "Tilt up to Pass"
 }

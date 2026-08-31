@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum GameModeId { classic, timeAttack, teams, kids, hard, custom }
+enum GameModeId { classic, timeAttack, teams, kids, hard, custom, numbers, images }
 
 class GameModeConfig {
   final GameModeId id;
@@ -13,6 +13,7 @@ class GameModeConfig {
   final List<String> restrictedCategoryIds;
   final bool usesCustomDeck;
   final bool isTeamMode;
+  final bool usesImageDeck;
 
   const GameModeConfig({
     required this.id,
@@ -24,6 +25,7 @@ class GameModeConfig {
     this.restrictedCategoryIds = const [],
     this.usesCustomDeck = false,
     this.isTeamMode = false,
+    this.usesImageDeck = false,
   });
 }
 
@@ -31,7 +33,7 @@ const List<GameModeConfig> kGameModes = [
   GameModeConfig(
     id: GameModeId.classic,
     icon: Icons.style,
-    color: Color(0xFF4A90E2),
+    color: Color(0xFFAECBFA),
     durationSeconds: 60,
     allowPass: true,
     penalizeWrong: false,
@@ -39,7 +41,7 @@ const List<GameModeConfig> kGameModes = [
   GameModeConfig(
     id: GameModeId.timeAttack,
     icon: Icons.timer,
-    color: Color(0xFFE24A4A),
+    color: Color(0xFFFFB199),
     durationSeconds: 30,
     allowPass: false,
     penalizeWrong: false,
@@ -47,7 +49,7 @@ const List<GameModeConfig> kGameModes = [
   GameModeConfig(
     id: GameModeId.teams,
     icon: Icons.groups,
-    color: Color(0xFFE2A04A),
+    color: Color(0xFFB7EFC5),
     durationSeconds: 60,
     allowPass: true,
     penalizeWrong: false,
@@ -56,7 +58,7 @@ const List<GameModeConfig> kGameModes = [
   GameModeConfig(
     id: GameModeId.kids,
     icon: Icons.child_care,
-    color: Color(0xFFE24AA0),
+    color: Color(0xFFFBB8DD),
     durationSeconds: 90,
     allowPass: true,
     penalizeWrong: false,
@@ -65,7 +67,7 @@ const List<GameModeConfig> kGameModes = [
   GameModeConfig(
     id: GameModeId.hard,
     icon: Icons.local_fire_department,
-    color: Color(0xFF8A4AE2),
+    color: Color(0xFFFDE38C),
     durationSeconds: 40,
     allowPass: true,
     penalizeWrong: true,
@@ -74,11 +76,29 @@ const List<GameModeConfig> kGameModes = [
   GameModeConfig(
     id: GameModeId.custom,
     icon: Icons.edit_note,
-    color: Color(0xFF4AE2A0),
+    color: Color(0xFF92E8D8),
     durationSeconds: 60,
     allowPass: true,
     penalizeWrong: false,
     usesCustomDeck: true,
+  ),
+  GameModeConfig(
+    id: GameModeId.numbers,
+    icon: Icons.numbers,
+    color: Color(0xFFC9BBF5),
+    durationSeconds: 45,
+    allowPass: true,
+    penalizeWrong: false,
+    restrictedCategoryIds: ['numbers'],
+  ),
+  GameModeConfig(
+    id: GameModeId.images,
+    icon: Icons.image,
+    color: Color(0xFFF3C9A1),
+    durationSeconds: 60,
+    allowPass: true,
+    penalizeWrong: false,
+    usesImageDeck: true,
   ),
 ];
 

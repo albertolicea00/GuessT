@@ -91,5 +91,17 @@
 
   "modeCustomName": "Personalizado",
   "modeCustomTagline": "Tu propio mazo",
-  "modeCustomDescription": "Escribe tus propias palabras y juega con tu mazo, guardado en este dispositivo. Se juega igual que el modo clásico."
+  "modeCustomDescription": "Escribe tus propias palabras y juega con tu mazo, guardado en este dispositivo. Se juega igual que el modo clásico.",
+
+  "modeNumbersName": "Números",
+  "modeNumbersTagline": "Cuenta hasta diez",
+  "modeNumbersDescription": "Adivina números del uno al diez. Simple, rápido y perfecto para calentar con un grupo nuevo.",
+
+  "modeImagesName": "Imágenes",
+  "modeImagesTagline": "Adivina la imagen",
+  "modeImagesDescription": "En vez de una palabra aparece una imagen — adivina qué es antes de que se acabe el tiempo.",
+  "imageDeckEmpty": "Todavía no hay imágenes. Agrega fotos en assets/images/movies/ y reinicia la app.",
+
+  "tiltDownHint": "Inclina hacia abajo para ¡Correcto!",
+  "tiltUpHint": "Inclina hacia arriba para Pasar"
 }
